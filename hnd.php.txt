@@ -1,0 +1,112 @@
+<html>
+<style>
+        body {
+  background-color: pink;
+  color: black;
+  text-align: center;
+  FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 20px
+}
+
+    </style>
+<body>
+<?php
+$name1 = $_POST['name1'];
+$name2 = $_POST['name2'];
+$name3 = $_POST['name3'];
+$name4 = $_POST['name4'];
+$name5 = $_POST['name5'];
+
+$mark1 = $_POST['mark1'];
+$mark2 = $_POST['mark2'];
+$mark3 = $_POST['mark3'];
+$mark4 = $_POST['mark4'];
+$mark5 = $_POST['mark5'];
+
+$parts1 = explode(" ", $name1);
+if(count($parts1) > 1) {
+    $lastname1 = array_pop($parts1);
+    $firstname1 = implode(" ", $parts1);
+}
+else
+{
+    $firstname1 = $name1;
+    $lastname1 = " ";
+}
+/////////////////////////////////////////////////////
+$parts2 = explode(" ", $name2);
+if(count($parts2) > 1) {
+    $lastname2 = array_pop($parts2);
+    $firstname2 = implode(" ", $parts2);
+}
+else
+{
+    $firstname2 = $name2;
+    $lastname2 = " ";
+}
+/////////////////////////////////////////////////////
+$parts3 = explode(" ", $name3);
+if(count($parts3) > 1) {
+    $lastname3 = array_pop($parts3);
+    $firstname3 = implode(" ", $parts3);
+}
+else
+{
+    $firstname3 = $name3;
+    $lastname3 = " ";
+}
+/////////////////////////////////////////////////////
+$parts4 = explode(" ", $name4);
+if(count($parts4) > 1) {
+    $lastname4 = array_pop($parts4);
+    $firstname4 = implode(" ", $parts4);
+}
+else
+{
+    $firstname4 = $name4;
+    $lastname4 = " ";
+}
+/////////////////////////////////////////////////////
+$parts5 = explode(" ", $name5);
+if(count($parts5) > 1) {
+    $lastname5 = array_pop($parts5);
+    $firstname5 = implode(" ", $parts5);
+}
+else
+{
+    $firstname5 = $name5;
+    $lastname5 = " ";
+}
+
+$array = array(
+    array($firstname1,$lastname1,$mark1),
+    array($firstname2,$lastname2,$mark2),
+    array($firstname3,$lastname3,$mark3),
+    array($firstname4,$lastname4,$mark4),
+    array($firstname5,$lastname5,$mark5)
+);
+$x = 1;
+echo '#'.'  _  '.'FName'.'  _  '.'LName'.'  _  '.'Mark'.'<br>'.'<hr style="height:3px;border-width:0;color:black;background-color:black">';
+foreach($array as $std)
+{
+      
+    echo '  _  '.$x.'  _  ';
+    
+    
+    
+    $x=$x+1;
+    foreach($std as $student)
+    {
+        
+        echo $student.'  _  ';
+        
+        
+    }
+    
+    echo '<hr>'."<br>";
+}
+
+//
+
+ ?>
+</body>
+</html> 

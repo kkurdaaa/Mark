@@ -1,0 +1,32 @@
+<html>
+    <style>
+        body {
+  background-color: pink;
+  color: black;
+  FONT-FAMILY: Verdana,Helvetica; FONT-SIZE: 20px;
+  text-align: center;
+}
+    </style>
+<body>
+
+<form action="hnd.php" method="post">
+<label> Student Name:</label> <input type="text" name="name1" placeholder="enter your name">
+<label> Final Mark</label> <input type="number" name="mark1" min="0" max="100">
+<br><br>
+<label> Student Name:</label> <input type="text" name="name2" placeholder="enter your name">
+<label> Final Mark</label> <input type="number" name="mark2" min="0" max="100">
+<br><br>
+<label> Student Name:</label> <input type="text" name="name3" placeholder="enter your name">
+<label> Final Mark</label> <input type="number" name="mark3" min="0" max="100">
+<br><br>
+<label> Student Name:</label> <input type="text" name="name4" placeholder="enter your name">
+<label> Final Mark</label> <input type="number" name="mark4" min="0" max="100">
+<br><br>
+<label> Student Name:</label> <input type="text" name="name5" placeholder="enter your name">
+<label> Final Mark</label> <input type="number" name="mark5" min="0" max="100">
+<br><br>
+<input type="submit" value="submit">
+</form>
+
+</body>
+</html>
